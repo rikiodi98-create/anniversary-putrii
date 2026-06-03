@@ -1,4 +1,113 @@
 <!DOCTYPE html>
-<html>
-...
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 10 Month Anniversary Putri ❤️</title>
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff6fa5,#ff9ecf);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    width:85%;
+    max-width:500px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,0.2);
+    z-index:2;
+}
+h1{
+    color:#ff4081;
+}
+p{
+    color:#555;
+    line-height:1.7;
+}
+button{
+    background:#ff4081;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#pesan{
+    margin-top:15px;
+    color:#ff4081;
+    font-weight:bold;
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    font-size:25px;
+    animation:turun linear infinite;
+}
+
+@keyframes turun{
+    from{
+        transform:translateY(-100vh);
+    }
+    to{
+        transform:translateY(100vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>💖 Happy 10 Month Anniversary Putri 💖</h1>
+
+    <p>
+        Hai Putri ❤️<br><br>
+        Tidak terasa kita sudah bersama selama <b>10 bulan</b>.
+        Terima kasih sudah menjadi bagian dari hari-hariku,
+        menemani cerita, tawa, dan kenangan yang kita buat bersama.
+    </p>
+
+    <p>
+        Semoga hubungan kita selalu diberi kebahagiaan,
+        saling mengerti, dan terus bersama dalam waktu yang lama. 💕
+    </p>
+
+    <button onclick="showLove()">Klik Aku ❤️</button>
+
+    <div id="pesan"></div>
+</div>
+
+<script>
+function showLove(){
+    document.getElementById("pesan").innerHTML =
+    "Putri ❤️ Aku bersyukur memilikimu. Happy 10 Month Anniversary Sayang! 💕";
+}
+
+for(let i=0;i<50;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤";
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(3+Math.random()*5)+"s";
+    h.style.opacity=Math.random();
+    document.body.appendChild(h);
+}
+</script>
+
+</body>
 </html>
